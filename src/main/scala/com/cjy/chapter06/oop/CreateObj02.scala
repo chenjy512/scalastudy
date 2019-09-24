@@ -1,5 +1,8 @@
 package com.cjy.chapter06.oop
 
+/**
+  * 有继承关系的对象引用
+  */
 object CreateObj {
   def main(args: Array[String]): Unit = {
 
