@@ -9,7 +9,7 @@ package com.cjy {
     var name: String = inName
   }
 
-  //2. 创建包
+  //2. 创建包--在包里创建包
   package scala {
 
     //3. 包下的包里面创建类
@@ -46,15 +46,23 @@ package com.cjy {
   package scala2{
       class Student2{
         var stuName="学生名字"
+        //如果有相同的类，则默认采用就近原则，如果非要使用父包的类，则需要指定路径
         def getPerson2():Person02={
-        return new Person02("子包下创建父包中的对象，不用import类")
+        return new Person02("就近原则")
+        }
+        def getPerson3():com.cjy.Person02={
+          return new com.cjy.Person02("指定路径调用父包下的类")
         }
       }
-
+      class Person02( val inName:String){
+        val name=inName
+      }
         object TestObj3 {
           def main(args: Array[String]): Unit = {
            val s1 = new Student2
             println(s1.getPerson2().name)
+            println(s1.getPerson3().name)
+            println(s1.getPerson2().inName)
           }
         }
   }

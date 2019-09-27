@@ -9,7 +9,9 @@ package com.cjy.chapter07.scalapackage
 object PackageDemo01 {
   def main(args: Array[String]): Unit = {
     //Scala 会自动引入的常用包
-
+    val list = List(1 to 10)
+    list.foreach(println)
+    println(list)
   }
 }
 
