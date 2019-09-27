@@ -10,3 +10,19 @@ object TraitDemo extends Serializable {
 class Demo1 extends Cloneable {
 
 }
+
+trait A {
+}
+
+trait B {}
+
+//继承多个特质
+class C extends A with B {}
+
+class D {}
+
+//继承父类、多个特质
+class E extends D with A with B {}
+
+//继承单个特质
+class F extends A {}
