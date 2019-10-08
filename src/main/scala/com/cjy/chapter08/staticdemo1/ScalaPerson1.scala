@@ -1,6 +1,7 @@
-package com.cjy.chapter08.staticdemo
+package com.cjy.chapter08.staticdemo1
 
 /**
+  * 静态使用场景：
   * 有一群小孩在玩堆雪人,不时有新的小孩加入,请问如何知道现在共有多少人在玩?
   */
 //伴生对象

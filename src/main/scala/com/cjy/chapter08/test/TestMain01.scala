@@ -2,6 +2,7 @@ package com.cjy.chapter08.test
 
 /**
   * 静态练习 8.1.7
+  *
   */
 object TestMain01 {
 

@@ -1,4 +1,4 @@
-package com.cjy.chapter08.traitdemo
+package com.cjy.chapter08.traitdemo2
 
 /**
   * 特质：1.特质除了在类声明是继承，还可以在new对象时动态混入。耦合性低
