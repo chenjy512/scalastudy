@@ -1,7 +1,8 @@
 package com.cjy.chapter10.t1_array
 
 /**
-  *通过 new 的方式创建数组，简单实用示范
+  * 数组创建方式：1.new
+  *              2. 调用伴生对象的 apply方法
   */
 object T1_Array01 {
   def main(args: Array[String]): Unit = {
@@ -31,6 +32,21 @@ object T1_Array01 {
     arr(0) = 99
     println(arr(0))
 
-//    Array(1 to 10).foreach(println(_))
+    //    Array(1 to 10).foreach(println(_))
+
+    //7. 通过apply函数创建数组
+    val arr2: Array[Int] = Array(1, 2, 3)
+    println("arr2 length:" + arr2.length)
+
+    /** Array中的源码，有多个类型的apply处理函数
+      *
+      * def apply(x: Int, xs: Int*): Array[Int] = {
+      * val array = new Array[Int](xs.length + 1)
+      * array(0) = x
+      * var i = 1
+      * for (x <- xs.iterator) { array(i) = x; i += 1 }
+      * array
+      * }
+      */
   }
 }
