@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43dad162-8d90-47bc-b363-3074c5470084" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T1_CreateMap01.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T2_MapOperatorMethod02.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,11 +34,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="T1_QueueCreate01.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="T1_QueueCreate01.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t4_queue/T1_QueueCreate01.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+              <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="T1_CreateMap01.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T1_CreateMap01.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="T2_MapOperatorMethod02.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T2_MapOperatorMethod02.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="97" column="12" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -106,8 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter07/extendsdemo/TestExtends.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter07/abstractdemo/TestMain.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter07/test/TestMain2.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter07/test/TestMain3.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter07/info" />
@@ -157,6 +177,8 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t3_list/T3_ListBuffer03.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/info" />
         <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t4_queue/T1_QueueCreate01.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T1_CreateMap01.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T2_MapOperatorMethod02.scala" />
       </list>
     </option>
   </component>
@@ -328,7 +350,17 @@
               <item name="scala" type="462c0819:PsiDirectoryNode" />
               <item name="cjy" type="462c0819:PsiDirectoryNode" />
               <item name="chapter10" type="462c0819:PsiDirectoryNode" />
-              <item name="t3_list" type="462c0819:PsiDirectoryNode" />
+              <item name="t4_queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scalastudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scalastudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="cjy" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter10" type="462c0819:PsiDirectoryNode" />
+              <item name="t5_map" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scalastudy" type="b2602c69:ProjectViewProjectNode" />
@@ -351,7 +383,7 @@
     <property name="nodejs_interpreter_path" value="D:/dev/node/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="mav&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/workspace2014/scalastudy/src/main/scala/com/cjy/chapter10/t5_map/T1_CreateMap01.scala&#10;mav&#9;ACTION&#9;ActivateMavenProjectsToolWindow" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -373,15 +405,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.T1_QueueCreate01">
-    <configuration name="T1_List01" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.T2_MapOperatorMethod02">
+    <configuration name="T1_CreateMap01" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.cjy.chapter10.t3_list.*" />
+          <option name="PATTERN" value="com.cjy.chapter10.t5_map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t3_list.T1_ListCreate01" />
+      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t5_map.T1_CreateMap01" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -431,14 +463,14 @@
       <module name="scalastudy" />
       <envs />
     </configuration>
-    <configuration name="T3_ListBuffer03" type="Application" factoryName="Application" temporary="true">
+    <configuration name="T2_MapOperatorMethod02" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.cjy.chapter10.t3_list.*" />
+          <option name="PATTERN" value="com.cjy.chapter10.t5_map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t3_list.T3_ListBuffer03" />
+      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t5_map.T2_MapOperatorMethod02" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -450,14 +482,14 @@
       <module name="scalastudy" />
       <envs />
     </configuration>
-    <configuration name="Test1_T2" type="Application" factoryName="Application" temporary="true">
+    <configuration name="T3_ListBuffer03" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.cjy.chapter10.t3_list.test.*" />
+          <option name="PATTERN" value="com.cjy.chapter10.t3_list.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t3_list.test.Test1_T2" />
+      <option name="MAIN_CLASS_NAME" value="com.cjy.chapter10.t3_list.T3_ListBuffer03" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -563,19 +595,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.T1_List01" />
-      <item index="1" class="java.lang.String" itemvalue="Application.T2_ListOperator02" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Test1_T2" />
-      <item index="3" class="java.lang.String" itemvalue="Application.T3_ListBuffer03" />
-      <item index="4" class="java.lang.String" itemvalue="Application.T1_QueueCreate01" />
+      <item index="0" class="java.lang.String" itemvalue="Application.T2_ListOperator02" />
+      <item index="1" class="java.lang.String" itemvalue="Application.T3_ListBuffer03" />
+      <item index="2" class="java.lang.String" itemvalue="Application.T1_QueueCreate01" />
+      <item index="3" class="java.lang.String" itemvalue="Application.T1_CreateMap01" />
+      <item index="4" class="java.lang.String" itemvalue="Application.T2_MapOperatorMethod02" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.T1_QueueCreate01" />
-        <item index="1" class="java.lang.String" itemvalue="Application.T3_ListBuffer03" />
-        <item index="2" class="java.lang.String" itemvalue="Application.T2_ListOperator02" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test1_T2" />
-        <item index="4" class="java.lang.String" itemvalue="Application.T1_List01" />
+        <item index="0" class="java.lang.String" itemvalue="Application.T2_MapOperatorMethod02" />
+        <item index="1" class="java.lang.String" itemvalue="Application.T1_CreateMap01" />
+        <item index="2" class="java.lang.String" itemvalue="Application.T1_QueueCreate01" />
+        <item index="3" class="java.lang.String" itemvalue="Application.T3_ListBuffer03" />
+        <item index="4" class="java.lang.String" itemvalue="Application.T2_ListOperator02" />
       </list>
     </recent_temporary>
   </component>
@@ -611,7 +643,7 @@
       <workItem from="1570497516337" duration="51525000" />
       <workItem from="1570864220576" duration="3431000" />
       <workItem from="1571383003678" duration="1273000" />
-      <workItem from="1572419233055" duration="3098000" />
+      <workItem from="1572419233055" duration="8426000" />
     </task>
     <task id="LOCAL-00001" summary="队列">
       <created>1572422311058</created>
@@ -620,11 +652,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572422311058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="队列">
+      <created>1572422343457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572422343457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149251000" />
+    <option name="totallyTimeSpent" value="154579000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,7 +686,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36877525" sideWeight="0.50642675" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38492596" sideWeight="0.49357328" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41991925" sideWeight="0.49357328" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -689,34 +728,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/soft/scala/scala-2.11.12-source.zip!/scala-2.11.12/src/library/scala/language.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="54" column="20" lean-forward="false" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/soft/scala/scala-2.11.12-source.zip!/scala-2.11.12/src/library/scala/Dynamic.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="31" column="6" lean-forward="false" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter08/test/TestMain01.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter08/traitdemo2/mytrait03.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter08/traitdemo2/TraitDemo01.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1046,7 +1057,7 @@
         <state relative-caret-position="388">
           <caret line="67" column="40" lean-forward="false" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
           <folding>
-            <element signature="e#576#592#0" expanded="true" />
+            <element signature="e#576#592#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1054,7 +1065,39 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t4_queue/T1_QueueCreate01.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/soft/scala/scala-2.11.12-source.zip!/scala-2.11.12/src/library/scala/collection/immutable/Map.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="78" column="7" lean-forward="false" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/soft/scala/scala-2.11.12-source.zip!/scala-2.11.12/src/library/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="101" column="33" lean-forward="true" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T1_CreateMap01.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/cjy/chapter10/t5_map/T2_MapOperatorMethod02.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="97" column="12" lean-forward="false" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
           <folding />
         </state>
       </provider>
