@@ -3,7 +3,7 @@ package com.cjy.chapter10.t5_map
 import scala.collection.mutable
 
 /**
-  * map常用操作函数
+  * map集合常用操作函数
   */
 object T2_MapOperatorMethod02 {
   def main(args: Array[String]): Unit = {
@@ -77,7 +77,7 @@ object T2_MapOperatorMethod02 {
     //3.3 删除多个元素
     a1 -=("D","G")
     println("a1: "+a1)
-
+    println("--------------map 4 种 遍历方式--------------")
     //4. map遍历操作
     println("---------k-v-----------")
     //4.1 取出kv对
