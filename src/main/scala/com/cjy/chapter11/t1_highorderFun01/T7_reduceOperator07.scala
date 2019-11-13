@@ -40,10 +40,11 @@ object T7_reduceOperator07 {
     i + n
   }
 
+
   def foldLeft[B](z: B)(@deprecatedName('f) op: (Int, Int) => B): B = {
     z
   }
-
+  //多参数
   def test(i:Int)(n:Int):Int={
     i+n
   }
