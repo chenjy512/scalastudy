@@ -48,6 +48,7 @@ object T8_foldOperator08 {
   * 假设op是两个参数相加操作：result = result+n1+n2+n3+n4
   */
 
+/*
 object TestFoldLeft {
   def main(args: Array[String]): Unit = {
     val listA = List(1, 2, 3)
@@ -56,4 +57,4 @@ object TestFoldLeft {
     println(b)
     println(c)
   }
-}
+}*/
