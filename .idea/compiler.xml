@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="scalastudy" target="1.7" />
+      <module name="scalastudy" target="1.5" />
       <module name="scalastudy-helloworld" target="1.7" />
     </bytecodeTargetLevel>
   </component>
