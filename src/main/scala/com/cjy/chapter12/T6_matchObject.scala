@@ -12,7 +12,6 @@ object T6_matchObject {
       case Square(d) => println("匹配成功～～" + d)
       case _ => println("匹配失败")
     }
-
   }
 }
 
