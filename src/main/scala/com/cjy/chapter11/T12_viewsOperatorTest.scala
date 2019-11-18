@@ -1,9 +1,10 @@
 package com.cjy.chapter11
 
-import scala.collection.{SeqView, immutable}
+import scala.collection.{SeqView, View, immutable}
 
 
-/**
+/**有版本不同区分：
+  *
   *stream懒加载的特性集合同样可以实现，调用集合view方法产生一个懒加载特性的集合，不使用集合中的元素时不会加载数据，
   * 并且view不会缓存数据，每次重新计算
   */
@@ -23,7 +24,7 @@ object T12_viewsOperatorTest {
 
     //3.方式三，使用view 来完成这个问题,程序中，对集合进行 map,filter,reduce,fold...
     //你并不希望立即执行，而是在使用到结果才执行，则可以使用 view 来进行优化
-    val view: SeqView[Int, immutable.IndexedSeq[Int]] = (1 to 100).view.filter(eq)
+    val view: View[Int] = (1 to 100).view.filter(eq)
     println(view) //未使用时，不加载
         for (item <- view){
           println("item=" + item) //使用时加载
