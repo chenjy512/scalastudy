@@ -55,6 +55,5 @@ object T1_QueueCreate01 {
     //不包含前两个元素-->级联使用
     val t2: mutable.Queue[Int] = q1.tail.tail
     print(t2) //Queue(3, 4, 4, 5, 6, 7)
-
   }
 }

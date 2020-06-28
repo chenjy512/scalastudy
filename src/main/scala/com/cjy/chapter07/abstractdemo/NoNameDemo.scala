@@ -6,7 +6,6 @@ object NoNameDemo {
       override def cry(): Unit = {
         println("我是匿名实现类")
       }
-
       override var bl = 12
     }
     demo.cry()
@@ -16,7 +15,6 @@ object NoNameDemo {
 //抽象类
 abstract class NoNameDemo1{
   def cry()
-
   var bl:Int
   var name:String="zhangsan "
 

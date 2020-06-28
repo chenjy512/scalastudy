@@ -8,7 +8,7 @@ import scala.collection.mutable.ListBuffer
 object T3_ListBuffer03 {
   def main(args: Array[String]): Unit = {
     val list0 = ListBuffer(1, 2, 3)
-    //如何访问
+    //集合访问
     println("lst0(2)=" + list0(2)) // 输出 lst0(2)= 3
     for (item <- list0) { // 遍历，是有序
 //      println("item=" + item)

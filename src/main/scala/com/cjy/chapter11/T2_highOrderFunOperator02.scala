@@ -18,6 +18,7 @@ object T2_highOrderFunOperator02 {
     //2. 高阶函数测试，带有参数输出的函数参数
     //2.1 调用方式一
     var d1: Double = highOrderFun(sum _,3.3)
+    println(d1)
     //2.1 调用方式二
     d1 = highOrderFun(sum(_),4.4)
     //2.1 调用方式三

@@ -18,6 +18,7 @@ object ApplyDemo {
 }
 
 
+
 class Pig(inName: String) {
   var name: String = inName
 }
@@ -28,3 +29,4 @@ object Pig {
 
   def apply(): Pig = new Pig("匿名猪")
 }
+

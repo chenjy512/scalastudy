@@ -50,6 +50,7 @@ class Student(inName: String, inAge: Int) {
   var name: String = inName
   var age: Int = inAge
 
+
   /**
     *   2. 辅助构造器
     * 首行必须调用（直接或间接）调用主构造器

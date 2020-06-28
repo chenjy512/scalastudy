@@ -56,5 +56,4 @@ class User2{
   import scala.collection.mutable._
   var map = new HashMap()
   var set = new HashSet()
-
 }

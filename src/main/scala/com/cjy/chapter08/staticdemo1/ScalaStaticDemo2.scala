@@ -25,7 +25,6 @@ object ScalaStaticDemo2 {
 }
 //伴生类
 class ScalaStaticDemo2{
-
 }
 
 /** 伴生类
