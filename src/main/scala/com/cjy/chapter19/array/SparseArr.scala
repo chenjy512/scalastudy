@@ -134,19 +134,23 @@ object SparseArr {
 
     val outer = new Breaks;
     val inner = new Breaks;
+    var bool = false
     outer.breakable {
       for (i <- 0 until array.length) {
         inner.breakable {
           for (j <- 0 until array(i).length) {
             if (array(i)(j) != 0) {
-              val bool = dealSY(array, new Node(i, j, array(i)(j)))
+               bool = dealSY(array, new Node(i, j, array(i)(j)))
               if (bool) {
                 res = array(i)(j)
                 inner.break()
-                outer.break()
               }
             }
           }
+        }
+        if (bool) {
+          inner.break()
+          outer.break()
         }
       }
     }

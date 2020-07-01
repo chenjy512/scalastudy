@@ -54,20 +54,23 @@ object WuziqiDemo01 {
     var res = 0
     val outer = new Breaks;
     val inner = new Breaks;
+    var bool = false
     //从上到下遍历每个棋子的右-下-左下斜-右下斜 是否五子相连
     outer.breakable {
       for (i <- 0 until array.length) {
         inner.breakable {
           for (j <- 0 until array(i).length) {
             if (array(i)(j) != 0) {
-              val bool = dealSY(array, new Node(i, j, array(i)(j))) //一种情况相连，则棋手就胜利了
+               bool = dealSY(array, new Node(i, j, array(i)(j))) //一种情况相连，则棋手就胜利了
               if (bool) {
                 res = array(i)(j) //返回赢得棋手
                 inner.break() //终止两层循环
-                outer.break()
               }
             }
           }
+        }
+        if(bool){
+          outer.break()
         }
       }
     }
