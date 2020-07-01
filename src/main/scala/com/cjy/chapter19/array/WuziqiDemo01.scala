@@ -1,89 +1,31 @@
 package com.cjy.chapter19.array
 
-import com.cjy.chapter19.array.io.FileUtil
-
-import scala.collection.mutable.ArrayBuffer
 import scala.util.control.Breaks
 import scala.util.control.Breaks.{break, breakable}
 
 /**
-  * 二维数组模拟五子棋棋盘
-  * 1：白子；2：黑子
-  * 棋盘效果模拟图如下：
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	1	0	0	0	0	0	0	0	0
-  * 0	0	0	2	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
-  * 0	0	0	0	0	0	0	0	0	0	0
+  * 输赢规则：按照数组坐标从第一行第一个开始遍历每个棋子的四个方向是否5子相连，
+  *           因为是从上到下遍历棋子所以这四个方向分别是 右横-下竖-左下斜-右下斜 这四种情况是否五子相连就能判断出输赢
+  *
+  * 缺点：1.需要遍历棋盘每个位置
+  *       2.没落下一子需要判断所有棋子
+  *
+  * 优化：可以使用稀疏数组解决缺点1，但是稀疏数组保存的棋子需要有序按照从上到下，从左到右，只需要对排序的落子位置遍历
+  *       缺点2无法解决！
+  *
+  * 缺点2解决方案：每落下一子需要遍历其4个大方向，横-竖-左斜-右斜 判断是否有一个方向五子相连
+  *       优点：1.不需要对所有棋子遍历，只需关注落下的棋子
+  *       缺点：1.判断条件相对复杂
   */
-object SparseArr {
-
+object WuziqiDemo01 {
   def main(args: Array[String]): Unit = {
-    //1.定义行列的长度
-    val rowSize = 11
-    val colSize = 11
-
-    //2.定义二维数组
-    val array = Array.ofDim[Int](rowSize, colSize)
-    array(1)(2) = 1
-    array(2)(3) = 2
-
-    var count: Int = 2 //记录棋子个数
-    //3.查看棋盘
-    showQipan(array)
-
-    //4. 稀疏数组解决存储过大问题
-    //问题：由棋盘显示可以看出默认无子为0，则在棋子较少时保存棋盘情况入磁盘时0也会占用存储空间，怎么来进行存储空间优化？
-    //解决：在棋子较少时，使用稀疏数组来保存已经落下的棋子位置，因为无子默认为0则不用保存，这样会减少实际存储空间
-    //其实在定义这个数组时可以根据已经落下多少颗棋子来定义
-    val sparseArr = new ArrayBuffer[Node](count + 1) //多出一个记录棋盘大小
-    val node = new Node(rowSize, colSize, 0) //棋盘大小
-    sparseArr.append(node)
-
-    //保存棋子
-    for (i <- 0 until array.length) {
-      for (j <- 0 until array(i).length) {
-        //棋子不为0保存
-        if (array(i)(j) != 0) {
-          sparseArr.append(new Node(i, j, array(i)(j)))
-        }
-      }
-    }
-
-    //5. 文件io操作
-    val datas = showSparseArr(sparseArr)
-    //显示稀疏数组结果
-    //落地为磁盘文件
-    val fileName = "d:/1.txt"
-    FileUtil.write(fileName)(datas)
-
-    println("------------文件读取----------")
-    //文件数据加载
-    val nodes = FileUtil.read(fileName)
-    nodes.foreach(println(_))
-    println("------------稀疏数组还原棋盘----------")
-    //6.根据文件读取数据，还原完整棋盘
-    val ar2 = Array.ofDim[Int](rowSize, colSize)
-    for (i <- 1 until nodes.length) {
-      val node = nodes(i)
-      ar2(node.row)(node.col) = node.value
-    }
-
-    for (items <- ar2) {
-      for (i <- items) {
-        print(i + "\t")
-      }
-      println()
-    }
     println("------------输赢判断----------")
     //7. 输赢判断
+    val rowSize = 11
+    val colSize = 11
     val array3 = Array.ofDim[Int](rowSize, colSize)
+    array3(0)(0) = 2
+    array3(0)(1) = 2
     array3(1)(2) = 1
     array3(1)(3) = 1
     array3(1)(4) = 1
@@ -93,32 +35,11 @@ object SparseArr {
     array3(2)(3) = 2
     array3(3)(3) = 2
     array3(4)(3) = 2
-//    array3(5)(3) = 2
+    //    array3(5)(3) = 2
     array3(6)(3) = 2
     val res = isSY(array3)
     println("棋手："+res +" 赢了")
-
   }
-
-  //棋盘显示函数
-  def showQipan(array: Array[Array[Int]]): Unit = {
-    for (items <- array) {
-      for (i <- items) {
-        print(i + "\t")
-      }
-      println()
-    }
-  }
-
-  def showSparseArr(arr: ArrayBuffer[Node]) = {
-    val strs = new ArrayBuffer[String]()
-    for (node <- arr) {
-      //     println(node)
-      strs.append(node.toString)
-    }
-    strs.toArray
-  }
-
   /**
     * 7.判断棋手输赢，遍历数据发现只有四种结果 横-竖-左斜-右斜 这四种情况，如下数据只要是一种情况就是赢
     * 05	06	07	08	09
@@ -131,18 +52,18 @@ object SparseArr {
     */
   def isSY(array: Array[Array[Int]]) = {
     var res = 0
-
     val outer = new Breaks;
     val inner = new Breaks;
+    //从上到下遍历每个棋子的右-下-左下斜-右下斜 是否五子相连
     outer.breakable {
       for (i <- 0 until array.length) {
         inner.breakable {
           for (j <- 0 until array(i).length) {
             if (array(i)(j) != 0) {
-              val bool = dealSY(array, new Node(i, j, array(i)(j)))
+              val bool = dealSY(array, new Node(i, j, array(i)(j))) //一种情况相连，则棋手就胜利了
               if (bool) {
-                res = array(i)(j)
-                inner.break()
+                res = array(i)(j) //返回赢得棋手
+                inner.break() //终止两层循环
                 outer.break()
               }
             }
@@ -152,21 +73,27 @@ object SparseArr {
     }
     res
   }
-
+  //四种情况判断
   def dealSY(array: Array[Array[Int]], node: Node): Boolean = {
     if (isHeng(array, node) || isShu(array, node) || isZuoxie(array, node) || isYouxie(array, node)) true else false
   }
 
-  //判断横
+  /**
+    * 判断横
+    * @param array  数据
+    * @param node   当前棋子
+    * @return 结果
+    */
   def isHeng(array: Array[Array[Int]], node: Node): Boolean = {
-    //    val rowSize = array.length
+    //1. 初始化数据
     val colSize = array(0).length
     var res = true
-    //判断右边是否还有4列
+    //2. 判断右边是否还有4列
     if(node.col + 4 > colSize -1){
       return false
     }
-    breakable {//纵向是否五子相连
+    breakable {
+      //3. 纵向是否五子相连
       for (i <- 0 to 4) {
         //判断余下只要有一列值不相等，则不用进行了
         if (array(node.row)(node.col+i) != node.value) {
@@ -175,13 +102,12 @@ object SparseArr {
         }
       }
     }
-    res
+    res //4. 返回结果
   }
 
   //判断竖
   def isShu(array: Array[Array[Int]], node: Node):Boolean = {
     val rowSize = array.length
-    var count = 0
     var res = true
     //判断下边是否还有4 行
     if(node.row + 4 > rowSize -1){
@@ -201,8 +127,7 @@ object SparseArr {
   //判断左下斜
   def isZuoxie(array: Array[Array[Int]], node: Node): Boolean = {
     val rowSize = array.length
-//    val colSize = array(0).length
-    var count = 0
+    //    val colSize = array(0).length
     var res = true
     //判断余下是否还有4行
     if (node.row + 4 > rowSize - 1) {
@@ -227,7 +152,6 @@ object SparseArr {
   def isYouxie(array: Array[Array[Int]], node: Node): Boolean = {
     val rowSize = array.length
     val colSize = array(0).length
-    var count = 0
     var res = true
     //判断余下是否还有4行
     if (node.row + 4 > rowSize - 1) {
@@ -247,10 +171,4 @@ object SparseArr {
     }
     res
   }
-
-}
-
-//记录一个棋子数据，行-列-值
-class Node(val row: Int, val col: Int, val value: Int) {
-  override def toString: String = row + "\t" + col + "\t" + value
 }

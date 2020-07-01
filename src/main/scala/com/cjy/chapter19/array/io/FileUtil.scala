@@ -19,7 +19,7 @@ object FileUtil {
     val writer = new PrintWriter(new File(fileName))
     println("--------数据写入--------")
     for (s <- datas) {
-      println(s)
+//      println(s)
       writer.write(s + "\n")
     }
     writer.close()
