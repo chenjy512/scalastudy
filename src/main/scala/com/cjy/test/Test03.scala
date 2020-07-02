@@ -1,4 +1,4 @@
-package test.demo
+package com.cjy.test
 
 /**
   * 编写函数largest(fun:(Int)=>Int,inputs:Seq[Int]),输出在给定输入序列中给定函数的最大值。举例来说，

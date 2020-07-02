@@ -1,4 +1,4 @@
-package test.demo
+package com.cjy.test
 
 import scala.collection.mutable.ListBuffer
 

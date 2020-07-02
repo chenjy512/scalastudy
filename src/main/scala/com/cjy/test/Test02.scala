@@ -1,4 +1,5 @@
-package test.demo
+package com.cjy.test
+
 import scala.math.sqrt
 
 object Test02 {
