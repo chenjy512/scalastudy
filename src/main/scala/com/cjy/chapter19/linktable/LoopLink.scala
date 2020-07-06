@@ -1,19 +1,20 @@
 package com.cjy.chapter19.linktable
 
+
+/** 问题：1 to 7 个小朋友，从坐标4的位置开始数2个坐标出局一个小朋友，并返回出局节点的下个节点，为下一轮游戏做准备，
+  *     依次出局的小朋友顺序为？
+  * 答案：7-->3-->6-->4-->2-->5-->1-->
+  */
+
 object LoopLink {
   def main(args: Array[String]): Unit = {
     val link = new LoopLink()
-    //    (0 to 10).foreach(link.addFirstNode(_))
     (1 to 7).foreach(link.addLastNode(_))
     link.showData()
     println()
+    //坐标4开始，步长2，头结点开始数
     link.game(4, 2, link.head)
-    //    println(link.size())
-    //    println(link.get(3))
-    //    println(link.remove(3))
-    //    println(link.get(3))
-    //    println(link.size())
-    //    link.showData()
+    link.showData()
   }
 }
 
@@ -36,7 +37,6 @@ class LoopLink {
   def addLastNode(value: Int): Unit = {
     add(value, length, 0, head)
   }
-
   /**
     * 插入结点
     *
@@ -149,47 +149,74 @@ class LoopLink {
     }
   }
 
+  /**
+    * 设置游戏规则
+    * @param index  开始节点坐标
+    * @param len    步长
+    * @param cur    当前开始节点
+    */
   def game(index: Int, len: Int, cur: Node): Unit = {
     val firstNode = getNode(index) //从哪个节点开始
     gameStart(len - 1, firstNode)
   }
 
+  /**
+    * 开始游戏
+    * @param len  步长
+    * @param cur  开始节点
+    */
   def gameStart(len: Int, cur: Node): Unit = {
-    if (length < 1) {
-      println("game over 。。。")
+    //当队列中剩下一个节点是，不在处理
+    if (length <= 1) {
       return
     } else {
+      //节点出局，返回下个开始节点
       val fist = removeAndGet(len, cur)
+      //递归继续处理
       gameStart(len, fist)
     }
   }
 
+  /**
+    * 节点出局
+    * @param len  步长
+    * @param cur  开始节点
+    * @return 下个开始节点
+    */
   def removeAndGet(len: Int, cur: Node): Node = {
+
     var node: Node = cur
-    var count = len
-    for (i <- 0 until count) {
-      //经过头结点
+    //1. 根据步长查找待出局节点的前一个节点
+    for (i <- 0 until len) {
+      //经过头结点，则需要找下下个节点
       if (node.value == 0) {
-        count += 1
+        node = node.next.next
+      }else{
+        node = node.next
       }
-      node = node.next
     }
-    //移除数据时
+    //2. 出局数据时-根据待出局节点的前一个节点来操作
+                            // 1、所以下一个节点不能是头节点
+                            // 2、待删除节点的前一个节点为头结点，则说明实际步长没有走；
+                            //问题分析：假设当前只有head-2-3-4，当前开始节点为4，寻找步长为一的下个节点，则next为head，其实应该是2的所以需要判断当前节点不能是头结点
     if (node.next.value == 0 || node.value == 0) {
-      node = node.next
+        node = node.next
     }
+    //根据待出局节点的前一个节点
     val del = node.next
     node.next = del.next
     del.next = null
+    //总数减1
     length -= 1
     if (del.value != 0) {
       print(del.value + "-->")
     }
-    if (node.next.value == 0) {
-      node = node.next
-    }
+//当前节点下个节点是头结点，则需要将指针指向头结点，因为头结点需要过滤
+//    if (node.next.value == 0) {
+//      node = node.next
+//    }
+    //返回出局节点的下个节点，为下一轮游戏的开始节点
     node.next
   }
 }
 
-//7-->1-->5-->10-->6-->3-->2-->4-->9-->8-->game over 。。。
